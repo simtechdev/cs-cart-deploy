@@ -47,7 +47,7 @@ task('deploy:stop_container', function(){
 });
 
 task('deploy:start_container', function(){
-  run('/usr/bin/docker run -d --rm -v /srv/project/images/:/app/images/ -v /srv/project/var/files/:/app/var/files/ -v /srv/project/var/backups/:/app/var/backups/ -v /srv/project/var/order_confirmations/:/app/var/order_confirmations/ -p 127.0.0.1:81:80 ' . get('ecr') . ':latest');
+  run('/usr/bin/docker run -d --rm -v /srv/project/images/:/app/images/ -v /srv/project/var/files/:/app/var/files/ -v /srv/project/var/backups/:/app/var/backups/ -p 127.0.0.1:81:80 ' . get('ecr') . ':latest');
 });
 
 task('deploy:cleanup', function(){
