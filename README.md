@@ -16,3 +16,7 @@
 ```sh
 dep --file=_tools/deploy.php deploy prod
 ```
+
+## Some useful CS-Cart/MultiVendor commands that can be implemented in CI/CD processes
+
+`ToDo`
