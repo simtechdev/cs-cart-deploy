@@ -17,6 +17,12 @@
 dep --file=_tools/deploy.php deploy prod
 ```
 
-## Some useful CS-Cart/MultiVendor commands that can be implemented in CI/CD processes
+## Some useful CS-Cart/MultiVendor commands for CI/CD processes
 
-`ToDo`
+### The correct way for CS-Cart cache clear 
+```php
+task('clear:cache',function(){
+  cd(get('deploy_path'));
+  run('/usr/bin/php admin.php --dispatch=storage.clear_cache');
+});
+```
